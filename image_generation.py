@@ -12,11 +12,13 @@ from openai import OpenAI
 # CONFIGURAÇÕES GERAIS
 # -------------------------------------------------------------------
 # Pasta "data" do projeto SP01 (ajuste se necessário)
-BASE_DATA_DIR = Path(
-    os.environ.get(
-        "SP01_DATA_DIR",
-        r"C:/Users/tbort/OneDrive/Documentos/GitHub/IDOR/SP01/SP01/data",
-    )
+
+
+REPO_ROOT = Path(__file__).resolve().parent
+DEFAULT_DATA_DIR = REPO_ROOT / "Data"   # ajuste para o seu layout real
+
+BASE_DATA_DIR = Path(os.environ.get("SP01_DATA_DIR", DEFAULT_DATA_DIR))
+
 )
 
 # ID do participante cujo trials serão usados
