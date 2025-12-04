@@ -187,14 +187,14 @@ def gerar_imagem_a_partir_do_texto(texto_resposta: str) -> bytes:
     Chama a API de imagens da OpenAI e retorna os bytes da imagem.
     """
     prompt = (
-        "Crie uma ilustração em estilo limpo e científico, sem texto escrito, "
-        "inspirada no seguinte parágrafo de uma resposta experimental. "
+        "Crie uma ilustração sem texto escrito, "
+        "inspirada no seguinte parágrafo. "
         "Não escreva palavras na imagem, apenas elementos visuais:\n\n"
         f"{texto_resposta}"
     )
 
     img = client.images.generate(
-        model="gpt-image-1",
+        model="gpt-image-1-mini",
         prompt=prompt,
         n=1,
         size="1024x1024",
