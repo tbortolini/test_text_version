@@ -19,8 +19,6 @@ DEFAULT_DATA_DIR = REPO_ROOT / "Data"   # ajuste para o seu layout real
 
 BASE_DATA_DIR = Path(os.environ.get("SP01_DATA_DIR", DEFAULT_DATA_DIR))
 
-)
-
 # ID do participante cujo trials serão usados
 # Ex.: "TB"
 PARTICIPANT_ID = os.environ.get("PARTICIPANT_ID", "TB")
