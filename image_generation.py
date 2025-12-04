@@ -197,7 +197,7 @@ def gerar_imagem_a_partir_do_texto(texto_resposta: str) -> bytes:
         model="gpt-image-1-mini",
         prompt=prompt,
         n=1,
-        size="1024x1024",
+        size="512x512",
     )
 
     b64 = img.data[0].b64_json
